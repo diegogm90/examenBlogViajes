@@ -5,8 +5,14 @@
             <div class="col-12 p-3">
                 <!--listado posts-->
                 <div class="row">
-                    <article class="col-6 col-md-4 mt-3" *ngFor="let post of arrPosts">
-                        <app-blog [mipost]="post"></app-blog>
+                    <article class="col-6 col-md-4 m-3 card-body border border-1" *ngFor="let post of arrPosts">
+                              <h5 class="card-title">{{post?.titulo}}</h5>
+                              <p class="card-text">{{post?.categoria}}</p>
+                              <p class="card-text">{{post?.autor}}</p>
+                              <a [routerLink]="['/post', post?.id]" class="btn btn-primary">Ver post</a>
+                            
+                         
+                        
                     </article>
                 </div>
             </div>
