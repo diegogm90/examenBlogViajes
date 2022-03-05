@@ -1,1 +1,15 @@
-<p>posts works!</p>
+<section class="container">
+    <div class="row">
+        <div class="col-12 p-3">
+            <app-filtros></app-filtros>
+            <div class="col-12 p-3">
+                <!--listado posts-->
+                <div class="row">
+                    <article class="col-6 col-md-4 mt-3" *ngFor="let post of arrPosts">
+                        <app-blog [mipost]="post"></app-blog>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

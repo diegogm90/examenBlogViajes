@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BlogComponentComponent } from './components/blog-component/blog-component.component';
+import { PostsComponent } from './components/posts/posts.component';
 import { FormComponent } from './components/form/form.component';
 import { ViewPostComponent } from './components/view-post/view-post.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: 'full', redirectTo: '/blog-component' },
-  { path: "blog-component", component: BlogComponentComponent },
+  { path: "", pathMatch: 'full', redirectTo: '/posts' },
+  { path: "posts", component: PostsComponent },
   { path: "new", component: FormComponent },
-  { path: "post/:idpost", component: ViewPostComponent },
-  { path: "**", redirectTo: '/blog-component' },
+  { path: "post/:idpost", component: ViewPostComponent, children: [] },
+  { path: "**", redirectTo: '/posts' },
 ];
 
 @NgModule({

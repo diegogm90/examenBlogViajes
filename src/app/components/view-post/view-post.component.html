@@ -1,1 +1,18 @@
-<p>view-post works!</p>
+<section class="container">
+<div>
+    <h1>{{miPost?.titulo}}</h1>
+    <small>Autor: {{miPost?.autor}}</small>
+    <br>
+    <small>Fecha: {{miPost?.fecha}}</small>
+    <br>
+    <small>Categoría: {{miPost?.categoria}}</small>
+    <div class="row">
+        <figure>
+            <img [src]="miPost?.imagen" alt="" class="img-fluid">
+        </figure>
+    </div>
+    <p mt-4>{{miPost?.texto}}</p>
+
+</div>
+</section>
+

@@ -1,6 +1,38 @@
-<div class="container">
-    <form >
-        <input type="text">
-        <input type="text">
-    </form>
-</div>
+<section class="container mt-4">
+    <div class="card p-3 shadow">
+        <h2>Publica tu post</h2>
+        <form novalidate [formGroup]="form" (ngSubmit)="getDataForm()">
+            <div class="my-2">
+                <label for="titulo">Titulo del Post</label>
+        <input class="form-control" type="text" id="titulo" formControlName="titulo">
+
+            </div>
+            <div class="my-2">
+                <label for="autor">Autor del Post</label>
+        <input class="form-control" type="text" id="autor" formControlName="autor">
+
+            </div>
+            <div class="my-2">
+                <label for="imagen">Imagen del Post</label>
+        <input class="form-control" type="text" id="imagen" formControlName="imagen">
+
+            </div>
+            <div class="my-2">
+                <label for="fecha">Fecha del Post</label>
+        <input class="form-control" type="text" id="fecha" formControlName="fecha">
+
+            </div>
+            <div class="my-2">
+                <label for="categoria">Categoría del Post</label>
+        <input class="form-control" type="text" id="categoria" formControlName="categoria">
+
+            </div>
+            <div class="my-2">
+                <label for="texto">Texto del Post</label>
+        <input class="form-control" type="text" id="texto" formControlName="texto">
+
+            </div>
+            <input type="submit" value="Publicar Post" class="btn btn-primary">
+        </form>
+    </div>
+</section>
